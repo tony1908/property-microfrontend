@@ -1,0 +1,90 @@
+.property-card {
+    cursor: pointer;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background: white;
+    flex: 0 0 300px;
+    min-width: 300px;
+  }
+  
+  .property-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .property-image-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .property-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .property-info {
+    padding: 1rem;
+  }
+  
+  .property-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+  }
+  
+  .property-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+    color: #222;
+    flex: 1;
+    margin-right: 1rem;
+  }
+  
+  .property-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    white-space: nowrap;
+  }
+  
+  .rating-star {
+    color: #FF5A5F;
+    font-size: 0.9rem;
+  }
+  
+  .rating-value {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #222;
+  }
+  
+  .property-type,
+  .property-location,
+  .property-details,
+  .property-host {
+    margin: 0.25rem 0;
+    color: #717171;
+    font-size: 0.9rem;
+  }
+  
+  .property-price {
+    margin-top: 0.75rem;
+    font-weight: 600;
+    color: #222;
+  }
+  
+  .price-amount {
+    font-size: 1.1rem;
+  }
+  
+  .price-period {
+    font-weight: normal;
+    color: #717171;
+  }
