@@ -4,7 +4,7 @@ import { type Property } from "../../model/types";
 
 function PropertyCard({image, rating, title, type, location, details, host, price, id }: Property) {
     //const navigate = useNavigate()
-
+    
     const handleCardClick = () => {
         //navigate(`/property/${id}`)
         console.log(id)
