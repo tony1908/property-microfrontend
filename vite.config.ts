@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import federation from '@originjs/vite-plugin-federation'
@@ -22,5 +23,12 @@ export default defineConfig({
   },
   server: {
     port: 3001,
+  },
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: './src/setupTests.ts',
+    css: true,
+    exclude: ['**/node_modules/**', '**/dist/**', '**/tests/e2e/**'],
   }
 })

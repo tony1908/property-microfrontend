@@ -1,0 +1,118 @@
+.performance-monitor {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  max-width: 300px;
+  font-family: 'Monaco', 'Menlo', monospace;
+  font-size: 12px;
+}
+
+.performance-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+}
+
+.performance-header h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.overall-score {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 10px;
+}
+
+.overall-score.good {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.overall-score.needs-improvement {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.overall-score.poor {
+  background-color: #fecaca;
+  color: #991b1b;
+}
+
+.metrics-grid {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.metric-item {
+  display: grid;
+  grid-template-columns: 40px 1fr auto;
+  align-items: center;
+  padding: 6px 8px;
+  border-radius: 4px;
+  background-color: #f8f9fa;
+}
+
+.metric-item.good {
+  background-color: #dcfce7;
+  border-left: 3px solid #16a34a;
+}
+
+.metric-item.needs-improvement {
+  background-color: #fef3c7;
+  border-left: 3px solid #d97706;
+}
+
+.metric-item.poor {
+  background-color: #fecaca;
+  border-left: 3px solid #dc2626;
+}
+
+.metric-item label {
+  font-weight: 600;
+  font-size: 10px;
+}
+
+.metric-item .value {
+  font-weight: 500;
+  text-align: center;
+}
+
+.metric-item .threshold {
+  font-size: 9px;
+  color: #666;
+  text-align: right;
+}
+
+.metrics-info {
+  border-top: 1px solid #eee;
+  padding-top: 8px;
+  font-size: 9px;
+  color: #666;
+}
+
+.metrics-info p {
+  margin: 2px 0;
+  line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+  .performance-monitor {
+    bottom: 10px;
+    right: 10px;
+    left: 10px;
+    max-width: none;
+  }
+}

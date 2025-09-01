@@ -1,9 +1,13 @@
 import './PropertyCard.css'
 import { type Property } from "../../model/types";
+import { useComponentPerformance } from "../../hooks/usePerformanceMonitor";
 //import { useNavigate } from 'react-router-dom'
 
 function PropertyCard({image, rating, title, type, location, details, host, price, id }: Property) {
     //const navigate = useNavigate()
+    
+    // Track component performance
+    useComponentPerformance('PropertyCard');
 
     const handleCardClick = () => {
         //navigate(`/property/${id}`)
