@@ -3,6 +3,11 @@ import { describe, it, expect, vi } from "vitest";
 import PropertyCard from "./PropertyCard";
 import type { Property } from "../../model/types";
 
+
+const myDummyFunction = (a:number, b:number) => {
+    return a + b
+}
+
 const mockProperty: Property = {
     id: 1,
     image: "https://example.com/image.jpg",
@@ -16,6 +21,11 @@ const mockProperty: Property = {
 }
 
 describe("PropertyCard", () => {
+    it("should call myDummyFunction with correct arguments", () => {
+        const result = myDummyFunction(1, 2)
+        expect(result).toBe(3)
+    })
+
     it("should render the property card", () => {
         render(<PropertyCard {...mockProperty} />)
 
@@ -45,6 +55,16 @@ describe("PropertyCard", () => {
 
         expect(consoleSpy).toHaveBeenCalledWith(mockProperty.id)
         consoleSpy.mockRestore()
+    })
+
+    it("should apply correct CSS classes", () => {
+        render(<PropertyCard {...mockProperty} />)
+
+        const card = screen.getByText(mockProperty.title)
+        expect(card).toHaveClass("property-title")
+
+        const rating = screen.getByText(mockProperty.rating)
+        expect(rating).toHaveClass("rating-value")
     })
 });
 
