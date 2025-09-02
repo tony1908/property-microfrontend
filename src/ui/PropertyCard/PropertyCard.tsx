@@ -6,7 +6,7 @@ function PropertyCard({image, rating, title, type, location, details, host, pric
     //const navigate = useNavigate()
     
     const handleCardClick = () => {
-        //navigate(`/property/${id}`)
+        //navigate(`/property/${id} m`)
         console.log(id)
     }
 
